@@ -9,10 +9,23 @@
     
         // Выведите на экран случайное целое число от 1 до 100. 
         document.write("<b>Задача 9: </b> Выведите на экран случайное целое число от 1 до 100. <br>");
+        
+        function getRandomArbitary(min, max)
+        {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        document.write(getRandomArbitary(0, 100) + "<br><br>");
 
         //Заполните массив 10-ю случайными целыми числами. (Подсказка: нужно воспользоваться циклами for или while)
         document.write("<b>Задача 10: </b>Заполните массив 10-ю случайными целыми числами. (Подсказка: нужно воспользоваться циклами for или while)<br>");
-    
+        var arr = [];
+        for(i = 0; i < 10; i++)
+        {
+            arr[i] = String(getRandomArbitary(0, 100));
+        };
+        document.write(arr);
+        console.log(arr);
+
     </script>
 </body>
 </html>
