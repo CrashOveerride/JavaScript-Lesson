@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>На switch-case</title>
+</head>
+<body>
+    <script>
+    
+    //Переменная num может принимать 4 значения: 1, 2, 3 или 4. Если она имеет значение '1', то в переменную result запишем 'зима', если имеет значение '2' – 'весна' и так далее. Решите задачу через switch-case.
+    document.write("<b>Задание 15: </b>Переменная num может принимать 4 значения: 1, 2, 3 или 4. Если она имеет значение '1', то в переменную result запишем 'зима', если имеет значение '2' – 'весна' и так далее. Решите задачу через switch-case.<br>");
+    var num = ['1', '2', '3', '4'];
+    switch (num[2]) 
+    {
+        case '1':
+        var result = "Зима";
+        document.write("Запишем в переменную \"result\" Зима<br><br>");
+        break;
+
+        case '2':
+        var result = "Весна";
+        document.write("Запишем в переменную \"result\" Весна<br><br>");
+        break;
+
+        case '3':
+        var result = "Лето";
+        document.write("Запишем в переменную \"result\" Лето<br><br>");
+        break;
+
+        case '4':
+        var result = "Осень";
+        document.write("Запишем в переменную \"result\" Зима<br><br>");
+        break;
+    };
+    document.write("Сейчас идет: " + result);
+
+    </script>
+</body>
+</html>
