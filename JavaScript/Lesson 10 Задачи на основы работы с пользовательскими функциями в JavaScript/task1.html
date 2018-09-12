@@ -10,16 +10,42 @@
     
         //Сделайте функцию, которая возвращает квадрат числа. Число передается параметром.
         document.write("<b>Задача 1: </b>Сделайте функцию, которая возвращает квадрат числа. Число передается параметром.<br>");
+        function powNum (number)
+        {
+            return Math.pow(number,2);
+        };
+        document.write(powNum(5) + "<br><br>");
 
         //Сделайте функцию, которая возвращает сумму двух чисел.
         document.write("<b>Задача 2: </b>Сделайте функцию, которая возвращает сумму двух чисел.<br>");
+        function sumNumber (a, b)
+        {
+            return a+b;
+        }
+        document.write(sumNumber(5,10) + "<br><br>");
 
         //Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
         document.write("<b>Задача 3: </b>Сделайте функцию, которая отнимает от первого числа второе и делит на третье.<br>");
+        function mathematic (a, b, c)
+        {
+            return (a-b)/c;
+        }
+        document.write(mathematic(6,3,3) + "<br><br>");
 
         //Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
         document.write("<b>Задача 4: </b> Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.<br>");
-    
+        function random (min, max)
+        {
+            return Math.floor(Math.random() * (max-min + 1)) + min;
+        }
+        function randomDay (random)
+        {
+            var week = ['пн','вт','ср','чт','пт','сб','вс'];
+            return week[random - 1];
+        }
+        console.log(random(1,7));
+        document.write(randomDay(random(1,7)));
+
     </script>
 </body>
 </html>
