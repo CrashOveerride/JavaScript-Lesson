@@ -9,19 +9,53 @@
     
         //Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения.
         document.write("<b>Задача 1: </b>Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения.<br>");
+        var str = "строка для реения 1 задачи";
+        var bigStr = str[0].toUpperCase() + str.substr(1);
+        var bigStr1 = str.split('');
+        console.log(bigStr1);
+        bigStr1[0] = bigStr1[0].toUpperCase();
+        console.log(bigStr1);
+        document.write(bigStr + "<br>");
+        document.write(bigStr1.join("") + "<br><br>");
 
         //Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') не используя цикл.
         document.write("<b>Задача 2: </b>Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') не используя цикл.<br>");
+        var numStr = "123456";
+        var numArr = numStr.split("");
+        numArr.reverse();
+        document.write(numArr.join("") + "<br><br>");
 
         //Дано число, например, 3751. Отсортируйте цифры в нем (сделайте из него 1357) не используя цикл.
         document.write("<b>Задача 3: </b>Дано число, например, 3751. Отсортируйте цифры в нем (сделайте из него 1357) не используя цикл.<br>");
+        var num = '3751';
+        var arrForNum = num.split('');
+        arrForNum.sort();
+        document.write(arrForNum.join("") + "<br><br>");
 
         //Проверьте, что строка начинается на http://. 
         document.write("<b>Задача 4: </b>Проверьте, что строка начинается на http://. <br>");
+        var http = "http://youtube.com"
+        if (http.substring(0,7) == "http://")
+        {
+            document.write("Это сайт!<br><br>");
+        }
+        else
+        {
+            document.write("Это не сайт!<br><br>");
+        };
 
         //Проверьте, что строка заканчивается на .html. 
         document.write("<b>Задача 5: </b>Проверьте, что строка заканчивается на .html. <br>");
-    
+        var file = "index.html";
+        if (file.substr(-5) == '.html')
+        {
+            document.write("Это html файл!<br><br>");
+        }
+        else
+        {
+            document.write("Это не html файл!<br><br>");
+        };
+
     </script>
 </body>
 </html>
