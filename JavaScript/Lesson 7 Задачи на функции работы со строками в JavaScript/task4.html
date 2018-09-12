@@ -9,13 +9,24 @@
     
         //Дана строка 'я учу javascript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива.
         document.write("<b>Задача 8: </b>Дана строка 'я учу javascript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива.<br>");
-        
+        var str = "я учу javascript!";
+        var arr = [];
+        document.write((arr = str.split(" ")) + "<br><br>");
+        console.log(arr);        
+
         //Дана строка 'я учу javascript!'. С помощью метода split запишите каждый символ этой строки в отдельный элемент массива.
         document.write("<b>Задача 9: </b>Дана строка 'я учу javascript!'. С помощью метода split запишите каждый символ этой строки в отдельный элемент массива.<br>");
+        var array = [];
+        document.write((array = str.split("")) + "<br><br>");
+        console.log(array);
 
         //В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31.12.2025'.
         document.write("<b>Задача 10: </b>В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31.12.2025'.<br>");
-    
+        var date = "2025-12-31";
+        var dateArr = [];
+        dateArr = date.split("-");
+        document.write(dateArr[0] + ":" + dateArr[1] + ":" + dateArr[2]);
+
     </script>
 </body>
 </html>
