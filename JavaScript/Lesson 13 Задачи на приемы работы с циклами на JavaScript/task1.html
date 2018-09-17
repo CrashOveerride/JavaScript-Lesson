@@ -9,7 +9,16 @@
     
         //Выведите на экран таблицу умножения (как в школьной тетради).
         document.write("<b>Задача 1: </b>Выведите на экран таблицу умножения (как в школьной тетради).<br>");
-    
+        for(var i = 1; i < 10; i++)
+        {
+            document.write("<div style='float: left; width: 100px; border: 1px solid blue; text-align: center'>");
+            for(var j = 1; j < 10; j++)
+            {
+                document.write(i + '*' + j + '=' + i*j + '<br>');
+            }
+                document.write('</div>');
+        }
+
     </script>
 </body>
 </html>
