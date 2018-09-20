@@ -9,16 +9,71 @@
     
         // Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
         document.write("<b>Задача 1: </b> Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.<br>");
+        function ucfirst(str)
+        {
+            var arr = str.split(' ');
+            for (var i = 0; i < arr.length; i++) 
+            {
+        	    arr[i] = arr[i].slice(0, 1).toUpperCase() + arr[i].slice(1);
+            }
+            return(arr.join(" "));
+        }
+        document.write(ucfirst("здесь будет текст с большими первыми символами") + "<br><br>");
 
         // Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'
         document.write("<b>Задача 2: </b> Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'<br>");
+        function upperText(str)
+        {
+            var array = str.split("_");
+            for(i = 1; i < array.length; i++)
+            {
+                array[i] = array[i].slice(0,1).toUpperCase() + array[i].slice(1);
+
+            }
+            return array.join("");
+        }
+        document.write(upperText("var_text_hello") + "<br><br>");
 
         //Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. Функция должна возвращать true или false.
         document.write("<b>Задача 3: </b>Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. Функция должна возвращать true или false.<br>");
-        
+        function textTrue(str, strArr)
+        {
+            var newStr = str.split(" ");
+            for(i = 0; i < newStr.length; i++)
+            {
+                for(j = 0; j <= strArr.length; j++)
+                {
+                    if(newStr[i] == strArr[j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        var strArr = ['банан', 'яблоко', 'апельсин', 'малина'];
+        var newStr = "У коли был банан";
+        document.write(textTrue(newStr, strArr) + "<br><br>");
+
         //Дана строка, например, '123456'. Сделайте из нее '214365'.
         document.write("<b>Задача 3: </b>Дана строка, например, '123456'. Сделайте из нее '214365'.<br>");
-    
+        function numberStr(num)
+        {
+            var str = String(num);
+            var arr = str.split('');
+            var newArr = [];
+            for ( i = 0; i < arr.length - 3; i++)
+            {
+                newArr = arr.slice(0, 2);
+                arr.shift();
+                arr.shift();
+                newArr.reverse();
+                arr = arr.concat(newArr);
+            }
+            return arr;
+        }
+        document.write(numberStr(123456));
+
     </script>
 </body>
 </html>
