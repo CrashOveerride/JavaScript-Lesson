@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Отработка циклов</title>
+</head>
+<body>
+    <script>
+    
+    //В следующих задачах вы должны вспомнить работу с циклами JavaScript.
+    document.write("<b>Задача 1: </b>В следующих задачах вы должны вспомнить работу с циклами JavaScript.<br>");
+
+
+    //Выведите с помощью цикла столбец чисел от 1 до 100. Показать решение.
+    document.write("<b>Задача 2: </b>Выведите с помощью цикла столбец чисел от 1 до 100. Показать решение.<br>");
+    for(i = 0; i <= 100; i++)
+    {
+        document.write(i + " ");
+    }
+    document.write('<br><br>for(i = 0; i <= 100; i++)<br>{<br><br>    document.write(i + " ");<br>}<br><br>');
+
+    //Выведите с помощью цикла столбец чисел от 100 до 1. Показать решение.
+    document.write("<b>Задача 3: </b>Выведите с помощью цикла столбец чисел от 100 до 1. Показать решение.<br>");
+    for(i = 100; i >= 0; i--)
+    {
+        document.write(i + " ");
+    }
+    document.write('<br><br>for(i = 100; i >= 0; i--)<br>{<br><br>    document.write(i + " ");<br>}<br><br>');
+
+    //Выведите с помощью цикла столбец четных чисел от 1 до 100. Показать решение.
+    document.write("<b>Задача 4: </b>Выведите с помощью цикла столбец четных чисел от 1 до 100. Показать решение.<br>");
+    for(i = 0; i <= 100; i++)
+    {
+        if (i % 2 == 0)
+        {
+        document.write(i + " ");
+        }
+    }
+    document.write('<br><br>for(i = 0; i <= 100; i++)<br>{<br>if (i % 2 == 0)<br>{<br>document.write(i + " ");<br>}<br>}<br><br>');
+
+    //Заполните массив 10-ю иксами с помощью цикла. Показать решение.
+    document.write("<b>Задача 5: </b>Заполните массив 10-ю иксами с помощью цикла. Показать решение.<br>");
+    var arr = [];
+    for(i = 0; i < 10; i++)
+    {
+        arr[i] = 'x';
+    }
+    document.write(arr + "<br><br>" + 'var arr = [];<br>for(i = 0; i < 10; i++)<br>{<br>arr[i] = "x";<br>}<br><br>');
+
+    //Заполните массив числами от 1 до 10 с помощью цикла. Показать решение.
+    document.write("<b>Задача 6: </b>Заполните массив числами от 1 до 10 с помощью цикла. Показать решение.<br>");
+    var arr1 = [];
+    for(i = 0; i <= 10; i++)
+    {
+        arr1[i] = i;
+    }
+    document.write(arr1 + "<br><br>" + 'var arr1 = [];<br>for(i = 1; i <= 10; i++)<br>{<br>arr1[i] = i;<br>}<br><br>');
+
+    //Заполните массив 10-ю случайными числами (дробями) от 0 до 1 с помощью цикла. Дроби округляйте до двух знаков в дробной части. Показать решение.
+    document.write("<b>Задача 7: </b>Заполните массив 10-ю случайными числами (дробями) от 0 до 1 с помощью цикла. Дроби округляйте до двух знаков в дробной части. Показать решение.<br>");
+    var arr2 = [];
+    for(i =0; i <= 10; i++)
+    {
+        var sum = Math.random();
+        arr2[i] = sum.toFixed(2);
+    }
+    document.write(arr2 + "<br><br>");
+    document.write('var arr2 = [];<br>for(i =0; i <= 10; i++)<br>{<br>var sum = Math.random();<br>arr2[i] = sum.toFixed(2);<Br>}<br><br>');
+
+    //Заполните массив 10-ю случайными числами от 1 до 10 с помощью цикла. Показать решение.
+    document.write("<b>Задача 8: </b>Заполните массив 10-ю случайными числами от 1 до 10 с помощью цикла. Показать решение.<br>");
+    var arr3 = [];
+    function getRandomArbitary(min, max) {return Math.floor(Math.random() * (max - min + 1)) + min};
+    for(i = 0; i <= 10; i++)
+    {
+        var sum = getRandomArbitary(1, 20);
+        arr3[i] = sum;
+    }
+    document.write(arr3 + "<br><br>");
+    document.write('var arr3 = [];<br>function getRandomArbitary(min, max) {return Math.floor(Math.random() * (max - min + 1)) + min};<br>for(i = 0; i <= 10; i++)<br>{<br>var sum = getRandomArbitary(1, 10);<br>arr3[i] = sum;<br>}<br><br>');
+
+    //Дан массив с числами. С помощью цикла выведите только те элементы массива, которые больше нуля и меньше 10-ти. Показать решение.
+    document.write("<b>Задача 9: </b>Дан массив с числами. С помощью цикла выведите только те элементы массива, которые больше нуля и меньше 10-ти. Показать решение.<br>");
+    var arr4 = [1,2,3,4,5,10,25,-1,-3];
+    var arr5 = [];
+    for(i=0; i < arr4.length; i++)
+    {
+        if(arr4[i] > 0 && arr4[i] < 10)
+        {
+            arr5[i] = arr4[i];
+        }
+    }
+    document.write(arr5 + "<br><br>");
+    document.write('var arr4 = [1,2,3,4,10,25,-1,-3];<br>var arr5 = [];<br>for(i=0; i < arr4.length; i++)<br>{<br>if(arr4[i] > 0 && arr4[i] < 10)<br>{<br>arr5[i] = arr4[i];<br>}<br>}<br><br>');
+
+    //Дан массив с числами. С помощью цикла проверьте, что в нем есть элемент со значением 5. Как только будет найден первый такой элемент - выведите 'Есть' и оборвите цикл. Если такого элемента нет - ничего не выводите. Показать решение.
+    document.write("<b>Задача 10: </b>Дан массив с числами. С помощью цикла проверьте, что в нем есть элемент со значением 5. Как только будет найден первый такой элемент - выведите 'Есть' и оборвите цикл. Если такого элемента нет - ничего не выводите. Показать решение<br>");
+    for(i = 0; i < arr4.length; i++)
+    {
+        if (arr4[i] == 5)
+        {
+            document.write("Есть!<br><Br>");
+            break;
+        }
+    }
+    document.write('for(i = 0; i < arr4.length; i++)<br>{<br>if (arr4[i] == 5)<br>{<br>document.write("Есть!<br><Br>");<br>break;<br><br>}<br>}<br><br>');
+
+    //Дан массив с числами. С помощью цикла найдите сумму элементов этого массива. Показать решение.
+    document.write("<b>Задача 11: </b>Дан массив с числами. С помощью цикла найдите сумму элементов этого массива. Показать решение.<br>");
+    var sum4 = 0;
+    for(i = 0; i < arr4.length; i++)
+    {
+        sum4 += arr4[i];
+    }
+    document.write(sum4 + "<br><br>");
+    document.write('var sum4 = 0;<br>for(i = 0; i < arr4.length; i++)<br>{<br>sum4 += arr4[i];<br>}<br><br>');
+
+    //Дан массив с числами. С помощью цикла найдите сумму квадратов элементов этого массива. Показать решение.
+    document.write("<b>Задача 12: </b>Дан массив с числами. С помощью цикла найдите сумму квадратов элементов этого массива. Показать решение.<br>");
+    var sum5 = 0;
+    for(i = 0; i < arr4.length; i++)
+    {
+        sum5 += Math.pow(arr4[i], 2);
+    }
+    document.write(sum5 + "<br><br>");
+    document.write('var sum5 = 0;<br>for(i = 0; i < arr4.length; i++)<br>{<br>sum5 += Math.pow(arr4[i], 2);<br>}<br><br>');
+
+    //Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество). Показать решение.
+    document.write("<b>Задача 13: </b>Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество). Показать решение.<br>");
+    var sum6 = 0;
+    var result = 0;
+    for(i = 0; i < arr4.length+1; i++)
+    {
+        if(i == arr4.length)
+        {
+            result = sum6/arr4.length;
+        }
+        else
+        {
+        sum6 += arr4[i];
+        }
+    }
+    document.write(result + "<br><Br>");
+    document.write('var sum6 = 0;<br>var result = 0;<br>for(i = 0; i < arr4.length+1; i++)<br>{<br>if(i == arr4.length)<br>{<br>result = sum6/arr4.length;<br>}<br>else<br>{<br>sum6 += arr4[i];<br>}<br>}');
+
+    </script>
+</body>
+</html>

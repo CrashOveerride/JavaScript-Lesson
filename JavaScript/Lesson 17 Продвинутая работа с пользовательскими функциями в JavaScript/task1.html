@@ -9,10 +9,64 @@
     
         //Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл
         document.write("<b>Задача 1: </b>Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл<br>");
+        var i = 0;
+        var arr = [1,2,3,4,5,6,7,8,9];
+        function arrNumInfo(arr)
+        {
+                if (i < arr.length)
+                {
+                    document.write(arr[i] + "<br>");
+                    i++;
+                    arrNumInfo(arr);
+                } 
+                else
+                {
+                return document.write("<br>");
+                }
+        };
+        arrNumInfo(arr);
 
         //Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
         document.write("<b>Задача 2: </b>Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).<br>");
-    
+        var num = 189;
+        
+        function reduceNum(num)
+        {
+            var sum = getDigitsSum(num);
+
+            if(sum >= 10)
+            {
+                return reduceNum(sum);
+            }
+            else
+            {
+                return sum;
+            }
+        }
+
+        function getSum(arr)
+        {
+            var sum = 0;
+
+            for(var i = 0; i < arr.length; i++)
+            {
+                sum += Number(arr[i]);
+            }
+
+            return sum;
+        }
+        
+        function getDigits(num)
+        {
+            return String(num).split('');
+        };
+
+        function getDigitsSum(num)
+        {
+            return getSum(getDigits(num));
+        }
+
+        document.write(reduceNum(99));
     </script>
 </body>
 </html>
