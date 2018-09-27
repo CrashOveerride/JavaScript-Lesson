@@ -1,0 +1,22 @@
+#div1 
+{
+    border: 1px solid red;
+    width: 200px;
+    height: 100;
+    text-align: center;
+}
+
+#button2
+{
+    width: 200px;
+}
+
+#button3
+{
+    width: 200px;
+}
+
+p 
+{
+    font-weight: bold;
+}

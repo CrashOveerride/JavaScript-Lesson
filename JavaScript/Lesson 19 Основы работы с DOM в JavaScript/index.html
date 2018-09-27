@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+        <P>Задача 1.</P>
+
+            <button onclick="function1()">Нажми на меня</button>
+
+        <P>Задача 2.</P>
+
+            <button onmouseover="function2()">Наведи на меня!</button>
+
+        <P>Задача 3.</P>
+
+            <button ondblclick="function3()">Нажми на меня двойным щелком</button>
+
+        <P>Задача 4.</P>
+
+        <div id="div1" onmouseout="function4()">
+            <p>Наведи на меня, а потом убери!</p>
+        </div>
+
+        <P>Задача 5.</P>
+
+            <input type="text" value="Ку-ку" id="input1">
+            <button onclick="function5()">Нажми на меня!</button>
+
+        <P>Задача 6.</P>
+
+            <input type="text" id="input2" value="Ку-ку">
+            <button onclick="function6()">Нажми на меня!</button>
+
+        <P>Задача 7.</P>
+
+            <img src="img/1.jpg" alt="diablo" id="img1">
+            <br>
+            <button onclick="function7()">Нажми, чтобы поменять картинку</button>
+
+        <P>Задача 8.</P>
+
+            <input type="text" id="input3" value="Ку-ку" onclick="function8(this)">
+
+        <P>Задача 9.</P>
+
+            <input type="text" id="input4" value="Ку-ку" onclick="function9(this)"> 
+
+        <P>Задача 10.</P>
+
+            <input type="text" id="input5" value="Ку-ку" onfocus="function10(this)" onblur="function11(this)"> 
+
+        <P>Задача 11.</P>
+
+            <input type="button" id="button2" value="Нажми на меня!" onclick="function12(this)">
+
+        <P>Задача 12.</P>
+
+            <input type="button" id="button3" value="Нажми на меня!" onclick="function13(this)">
+
+        <P>Задача 13.</P>
+
+            <img src="img/1.jpg" alt="diablo" id="img2" onmousemove="function14(this)" onmouseout="function15(this)">
+
+        <P>Задача 14.</P>
+
+            <input type="text" id="input6" value="Ку-ку">
+            <button onclick="function16()">Нажми на меня!</button>
+
+        <P>Задача 15.</P>
+
+            <input type="text" id="input7" value="Ку-ку">
+            <button onclick="function17()">Нажми на меня!</button>
+            <button onclick="function18()">А потом на меня!</button>
+
+        <P>Задача 16.</P>
+
+            <input type="text" id="input8" value="Ку-ку">
+            <br>
+            <button onclick="function19()">Нажми на меня!</button>
+
+        <P>Задача 17.</P>
+
+            Это input type = "submit";
+            <br>
+            <input type="submit" onclick="function20()" value="Не нажимай, а то всё поломаешь!" id="submit1">
+            <br>
+            <input type="submit" onclick="function21()" value="Эх ты... Нажимай, чтобы починить" id="submit2" style="display: none;">
+
+        <P>Задача 18.</P>
+
+            Это счетчик кнопки. Нажми и прибавится единица!
+            <br>
+            <input type="submit" value="0" id="submit3" onclick="function22(this)" style="width: 200px">
+
+        <P>Задача 19.</P>
+
+            <input type="text" id="input9" value="Ку-ку">
+            <button onclick="function23()" id="button4">Нажми на меня!</button>
+
+        <P>Задача 20.</P>
+
+            <input type="text" id="input10" class="eee www ddd" value="Ку-ку">
+            <button onclick="function24()" id="button4">Нажми на меня!</button>
+
+        <P>Задача 21.</P>
+
+            <input type="text" value="Привет!" id="input11">
+            <input type="text" value="Пока!" id="input12">
+            <button onclick="function25()">Нажми меня!</button>
+        
+        <P>Задача 22.</P>
+
+            <input type="text" placeholder="Введите число" id="input13">
+            <input type="text" value="0" id="input14" disabled>
+            <button onclick="function26()">Нажми меня!</button>
+
+        <P>Задача 23.</P>
+
+            <input type="text" placeholder="Введите число" id="input15">
+            <br><br>
+            <input type="text" value="0" id="input16" disabled>
+            <br><br>
+            <button onclick="function27()">Нажми меня!</button>
+
+        <P>Задача 24.</P>
+
+            <input type="submit" id="submit4" value="Нажми на меня!" onclick="function28(this)">
+
+        <P>Задача 25.</P>
+
+            <input type="text" id="input17" value="">
+
+            <br><br>
+
+            <input type="submit" id="submit5" value="+" placeholder="Я добавлю +" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="-" placeholder="Я добавлю -" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="/" placeholder="Я добавлю /" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="*" placeholder="Я добавлю *" onclick="function29(this)" style="width: 300px"><br>
+
+            <br><br>
+
+            <input type="submit" id="submit5" value="1" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="2" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="3" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="4" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="5" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="6" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="7" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="8" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="9" onclick="function29(this)" style="width: 300px"><br>
+            <input type="submit" id="submit5" value="0" onclick="function29(this)" style="width: 300px">
+
+    <script>
+    
+       // Задача 1
+    
+            function function1()
+            {
+                alert("Привет!");
+            }
+
+        // Задача 2
+        
+            function function2()
+            {
+                alert("Привет!");
+            }
+
+        // Задача 3
+        
+            function function3()
+            {
+                alert("Привет!");
+            }
+         
+        // Задача 4
+
+            function function4()
+            {
+                alert("Привет!");
+            }
+
+        // Задача 5
+
+            function function5()
+            {
+                var elem = document.getElementById("input1");
+                alert(elem.value);
+            }
+
+        // Задача 6
+
+            function function6()
+            {
+                var elem = document.getElementById("input2");
+                elem.value = "Ой, текст поменялся!";
+            }
+
+        // Задача 7
+
+            function function7()
+            {
+                var elem = document.getElementById("img1");
+                img1.src = "img/2.png";
+            }
+
+        // Задача 8
+
+            function function8(elem)
+            {
+                alert(elem.value);
+            }
+
+        // Задача 9
+
+            function function9(elem)
+            {
+                elem.value = "ой, все пропало!";
+            }
+
+        // Задача 10
+
+            function function10(elem)
+            {
+                elem.value = "ой, все пропало!";
+            }
+
+            function function11(elem)
+            {
+                elem.value = "ой, опять все пропало";
+            }
+
+        // Задача 11
+
+            function function12(elem)
+            {
+                elem.value = "Ку-ку!";
+            }
+
+        // Задача 12
+
+            function function13(elem)
+            {
+                elem.value = "Ку-ку!";
+                elem.disabled = "true";
+            }
+
+        // Задача 13
+
+            function function14(elem)
+            {
+                elem.src="img/2.png";
+            }
+
+            function function15(elem)
+            {
+                elem.src="img/1.jpg";
+            }
+
+        // Задача 14
+
+            function function16()
+            {
+                var elem = document.getElementById("input6");
+                elem.style.color = "red";
+                elem.style.width = "400px";
+            }
+
+        // Задача 15
+
+            function function17()
+            {
+                var elem = document.getElementById("input7");
+                elem.style.display = "none";
+            }
+
+            function function18()
+            {
+                var elem = document.getElementById("input7");
+                elem.style.display = "inline-block";
+            }
+
+        // Задача 16
+
+            function function19()
+            {
+                var elem = document.getElementById("input8");
+                elem.style.width = "300px";
+                elem.style.height = "100px";
+                elem.style.borderRadius = "25px";
+                elem.style.color = "red";
+                elem.style.textAlign = "center";
+
+                elem.value = "Я поменял свой текст и css.";
+            }
+
+        // Задача 17
+
+            function function20()
+            {
+                var elem = document.getElementById("submit1");
+                var elem1 = document.getElementById("submit2");
+                elem.disabled = true;
+                elem.value = "Говорил не нажимай!";
+                elem1.style.display = "inline-block";
+            }
+
+            function function21()
+            {
+                var elem = document.getElementById("submit1");
+                var elem1 = document.getElementById("submit2");
+                elem.disabled = false;
+                elem.value = "Не нажимай, а то всё поломаешь!";
+                elem1.style.display = "none";                
+            }
+
+        // Задача 18
+
+            function function22(elem)
+            {
+                elem.value++;
+            }
+
+        // Задача 19
+
+            function function23()
+            {
+                var elem = document.getElementById("input9");
+                var button = document.getElementById("button4");
+
+                elem.value = "Ой, теперь я справа!";
+                elem.style.position = "relative";
+                elem.style.left = "120px";                
+
+                button.style.position = "relative";                
+                button.style.right = "180px";
+            }
+
+        // Задача 20
+
+            function function24()
+            {
+                var elem = document.getElementById("input10");
+                elem.value = "Мои классы css: " + elem.className;
+                elem.style.width = "200px";
+            }
+
+        // Задача 21
+
+            function function25()
+            {
+                var elem = document.getElementById("input11"); 
+                var elem1 = document.getElementById("input12");
+                var elemValue = elem.value;
+                var elem1Value = elem1.value;
+                elem.value = elem1Value;
+                elem1.value = elemValue;
+            }
+
+        // Задача 22
+
+            function function26()
+            {
+                var elem = document.getElementById("input13"); 
+                var elem1 = document.getElementById("input14");
+                var elemValue = elem.value;
+                elem1.value = Math.pow(elemValue, 2);
+            }
+
+        // Задача 23
+
+            function function27()
+            {
+                var elem = document.getElementById("input15");
+                var elem1 = document.getElementById("input16");
+                var elemValue = elem.value;
+
+                if(isNaN(elemValue))
+                {
+                    alert("Введено не число!");
+                }
+                else
+                {                    
+                    elem1.value = Math.pow(elemValue, 2);
+                }
+            }
+
+        // Задача 24
+
+            function function28(elem)
+            {
+                elem.disabled = true;
+                elem.style.cursor = "help";
+            }
+
+        // Задача 25
+
+            function function29(elem)
+            {
+                var input = document.getElementById("input17");
+                var inputValue = input.value;
+                input.value = inputValue + elem.value;
+            }
+
+    </script>
+</body>
+</html>
