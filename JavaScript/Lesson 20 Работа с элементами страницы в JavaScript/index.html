@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>20 урок</title>
+</head>
+<body>
+
+    <p>Задача 1</p>
+
+        <span id="span1">При на жатии на кнопку, текст в абзаце меняется.</span>
+        <br>
+        <input type="submit" onclick="func1()" value="Нажмите на кнопку.">
+
+    <p>Задача 2</p>
+
+        <span id="span2">При на жатии на кнопку, текст в абзаце меняется.</span>
+        <br>
+        <input type="submit" onclick="func2()" value="Нажмите на кнопку.">
+
+    <p>Задача 3</p>
+
+        <h1 id="h1">При на жатии на кнопку, текст в абзаце останется, но абзац станет большим.</h1>
+        <br>
+        <input type="submit" onclick="func3()" value="Нажмите на кнопку.">
+
+    <p>Задача 4</p>
+
+            <input type="text" id="input1" value="" placeholder="Введите число">
+                +
+            <input type="text" id="input2" value="" placeholder="Введите число">
+                =
+            <span id="span3">?</span>
+                <br><br>
+        <button onclick="func4()">Нажми на меня!</button>
+
+    <p>Задача 5</p>
+
+        <p>Я обычный тег, нами на кнопку и я поменяюсь</p>    
+        <p>Я обычный тег, нами на кнопку и я поменяюсь</p>
+        <p>Я обычный тег, нами на кнопку и я поменяюсь</p>
+        <p>Я обычный тег, нами на кнопку и я поменяюсь</p>
+        <h2>А я h2 и е поменяюсь!</h2>
+        <br>
+        <button onclick="func5()">Нажми на меня!</button>
+    
+    <p>Задача 6</p>
+
+        <h2 class="www">Заголовок с классом www.</h2>
+        <p class="www">Абзац с классом www.</p>
+        <p class="www">Абзац с классом www.</p>
+        <p>Просто абзац, не поменяется.</p>
+        <button onclick="func6()">Нажми на меня!</button>
+
+    <p>Задача 7</p>
+
+        <h2 class="www">Заголовок с классом www, не поменяется.</h2>
+        <p class="www">Абзац с классом www.</p>
+        <p class="www">Абзац с классом www.</p>
+        <p class="www">Абзац с классом www.</p>
+        <p>Просто абзац, не поменяется.</p>
+        <br>
+        <button onclick="func7()">Нажми на меня.</button>
+
+    <p>Задача 8</p>
+
+        <p id="p2" class="my-class">Абзац с class="my-class"</p>
+        <button onclick="func8()">Нажми - и я выведу класс абзаца.</button>
+
+    <p>Задача 9</p>
+
+        <p id="p3" class="my-class1">Абзац с class="my-class1"</p>
+        <button onclick="func9()">Нажми - и я выведу класс абзаца.</button><br>
+        <button onclick="func10()" id="button">Нажми - и я удалю класс абзаца.</button>
+
+    <p>Задача 10</p>
+
+        <p id="p4" class="my-class class">Абзац с class="my-class class"</p>
+        <button onclick="func11()">Нажми - и я выведу класс абзаца.</button><br>
+        <button onclick="func12()" id="button1">Нажми - и я удалю класс абзаца.</button>
+
+    <p>Задача 11</p>
+
+        <input type="text" id="input4" onkeyup="func13()">
+        <span id="span4"></span>
+
+    <p>Задача 12</p>
+
+        <a href="htpp://google.com" class="href">Ссылка 1</a><br>    
+        <a href="htpp://yanex.ru" class="href">Ссылка 2</a><br>
+        <a href="htpp://mail.ru" class="href">Ссылка 3</a>
+        <br>
+        <button onclick="func14()">Нажми на меня.</button>    
+
+    <p>Задача 13</p>
+
+        <p id="p5">При нажатии на кнопку текст в абзаце поменяется.</p>
+        <button onclick="func15()" id="button2">Нажми на меня.</button>
+
+    <p>Задача 14</p>
+
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <button onclick="func16()">Нажми на меня.</button>
+
+    <p>Задача 15</p>
+
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <p>Абзац с текстом.</p>
+        <button onclick="func17()">Нажми на меня.</button>
+
+    <script>
+    
+        // Задача 1
+
+            function func1()
+            {
+                var elem = document.querySelector('#span1');
+                elem.innerHTML = "Ку-ку! А я <b>жирный!</b>"; 
+            }
+
+        // Задача 2
+
+            function func2()
+            {
+                var elem = document.querySelector('#span2');
+                elem.outerHTML = "<h3>Абзац превратился в h3.</h3>"; 
+            }
+
+        // Задача 3
+
+            function func3()
+            {
+                var elem = document.querySelector('#h1');
+                elem.outerHTML = "<h3>" + elem.innerHTML + "</h3>"; 
+            }
+
+        // Задача 4
+
+            function func4()
+            {
+                var elem1 = +document.getElementById('input1').value;
+                var elem2 = +document.getElementById('input2').value;
+                var elem3 = document.getElementById('span3');
+                elem3.innerHTML = elem1 + elem2;
+            }
+
+        // Задача 5
+
+            function func5()
+            {
+                var elem = document.getElementsByTagName('p');
+                for(var i = 5; i <= 8; i++)
+                {
+                    elem[i].innerHTML = "Ку-ку!";
+                }
+            }
+
+        // Задача 6
+
+            function func6()
+            {
+                var elem = document.getElementsByClassName('www');
+                for(var i = 0; i < elem.length; i++)
+                {
+                    elem[i].innerHTML = i+1;
+                }
+            }
+
+        // Задача 7 
+
+            function func7()
+            {
+                var elem = document.querySelectorAll('.www');
+                console.log(elem);
+                for(var i = 4; i < elem.length; i++)
+                {
+                    elem[i].innerHTML = i+1;
+                }
+            }
+
+        // Задача 8
+
+            function func8()
+            {
+                var elem = document.getElementById('p2');
+                alert(elem.getAttribute('class'));
+            }
+
+        // Задача 9
+
+            function func9()
+            {
+                var elem = document.getElementById('p3');
+                alert(elem.getAttribute('class'));
+            }
+
+            function func10()
+            {
+                var elem = document.getElementById('p3');
+                var elem1 = document.getElementById('button');
+                elem.removeAttribute('class')
+                alert("Я удалил класс =Ъ");
+                elem1.innerHTML = "Нажми на верхнюю кнопку, чтобы проверить."
+
+            }
+
+        // Задача 10
+
+            function func11()
+            {
+                var elem = document.getElementById('p4');
+                alert(elem.getAttribute('class'));
+            }
+
+            function func12()
+            {
+                var elem = document.getElementById('p4');
+                var elem1 = document.getElementById('button1');
+                elem.setAttribute('class', 'newClass')
+                alert("Теперь там новый класс.");
+                elem1.innerHTML = "Нажми на верхнюю кнопку, чтобы проверить."
+
+            }
+
+        // Задача 11
+
+            function func13()
+            {
+                var elem = document.getElementById('input4');
+                var elem1 = document.getElementById('span4');
+                elem1.innerHTML = elem.value;
+            }
+
+        // Задача 12
+
+            function func14()
+            {
+                var elem = document.getElementsByTagName('a');
+                console.log(elem);
+                for( var i = 0; i < elem.length; i++)
+                {
+                    elem[i].innerHTML = elem[i].innerHTML + "  " + elem[i].getAttribute('href');
+                }
+            }
+
+        // Задача 13
+
+            function func15()
+            {
+                var elem = document.getElementById('p5');
+                var elem1 = document.getElementById('button2');
+                elem.innerHTML = "О нет, ты поменял текст! Я запрещаю тебе это!";
+                elem1.disabled = true;
+                elem1.innerHTML = "Ну вот, мы больше не поигарем(";
+            }
+
+        // Задача 14 
+
+           function func16()
+            {
+                var elem = document.getElementsByTagName('p');
+                var j = 0;
+                for(i = 29; i < 37; i++)
+                {
+                    elem[i].innerHTML = j;
+                    j++;
+                }
+                
+            } 
+
+        // Задача 15
+
+            function func17()
+            {
+                var elem = document.getElementsByTagName('p');
+                for(i = 38; i < elem.length; i++)
+                {
+                    elem[i].innerHTML = i + ". " + elem[i].innerHTML;
+                }
+                
+            } 
+    
+    </script>
+</body>
+</html>
