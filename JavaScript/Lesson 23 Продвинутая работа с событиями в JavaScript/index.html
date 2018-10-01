@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Урок 23</title>
+</head>
+<body>
+    
+        <p>Задача 1</p>
+
+            <img src="img/1.png" id="img1">
+            <img src="img/2.png" id="img2">
+            <img src="img/3.png" id="img3">
+
+        <p>Задача 2</p>
+
+            <a href="#" id="href1">Ссылка 1</a>
+            <a href="#" id="href2">Ссылка 2</a>
+            <a href="#" id="href3">Ссылка 3</a>
+
+        <p>Задача 3</p> 
+
+            <a href="#" id="href4">Ссылка 4</a>
+            <a href="#" id="href5">Ссылка 5</a>
+            <a href="#" id="href6">Ссылка 6</a>
+
+        <p>Задача 4</p>
+
+            Решение в 3. Это 2 в 1.
+
+        <p>Задача 5</p>
+
+            <input type="text" value="Первый инпут">
+            <input type="text" value="Второй инпут">
+            <input type="text" value="Третий инпут">
+            <p id='test'>1.</p>
+
+        <p>Задача 6</p>
+
+            <input type="text" value="Четвертый инпут">
+            <input type="text" value="Пятый инпут">
+            <input type="text" value="Шестой инпут">
+
+        <p>Задача 7</p>
+
+            <p id="numberPow">2</p>
+
+        <p>Задача 8</p>
+
+            <input type="text" placeholder="Введите 10 символов." id="inputCheck" data-length="10">
+
+        <p>Задача 9</p>
+        <div class="block"></div>
+        <div class="block"></div>
+
+    <script>
+    
+        // Задача 1.
+
+            var img1 = document.querySelector('#img1');
+            var img2 = document.querySelector('#img2');
+            var img3 = document.querySelector('#img3');
+
+            img1.addEventListener('click', func1);
+            img2.addEventListener('click', func1);
+            img3.addEventListener('click', func1);
+
+            function func1()
+            {
+                alert(this.src);
+            }
+
+        // Задача 2.
+
+            var href1 = document.querySelector('#href1');
+            var href2 = document.querySelector('#href2');
+            var href3 = document.querySelector('#href3');
+
+            href1.addEventListener('mouseover', func2);
+            href2.addEventListener('mouseover', func2);
+            href3.addEventListener('mouseover', func2);
+
+            function func2()
+            {
+                this.title = this.innerHTML;
+                alert(this.title);
+            }
+
+        // Задача 3.
+
+            var href4 = document.querySelector('#href4');
+            var href5 = document.querySelector('#href5');
+            var href6 = document.querySelector('#href6');
+
+            href4.addEventListener('mouseover', func3);
+            href5.addEventListener('mouseover', func3);
+            href6.addEventListener('mouseover', func3);
+
+        // Задача 4.
+
+            
+
+            function func3()
+            {
+                this.innerHTML = this.innerHTML + " (" + this.href + ")";
+                this.removeEventListener('mouseover', func3);
+            }
+
+        // Задача 5.
+
+            var allInput = document.getElementsByTagName('input');
+            var test = document.getElementById('test');
+            for(i = 0; i < allInput.length; i++)
+            {
+                allInput[i].addEventListener('blur', func4);
+            }
+
+            function func4()
+            {
+                test.innerHTML = test.innerHTML + this.value;
+            }
+
+        // Задача 6.
+
+            for(i = 0; i < allInput.length; i++)
+            {
+                allInput[i].addEventListener('click', func5)
+            }
+
+            function func5()
+            {
+                alert(this.value);
+                this.removeEventListener('click', func5);
+            }
+
+        // Задача 7.
+
+            var pow = document.querySelector('#numberPow');
+            pow.addEventListener('click', func6);
+
+            function func6()
+            {
+                pow.innerHTML = Math.pow(pow.innerHTML, 2);
+            }
+
+        // Задача 8.
+
+            var check = document.querySelector('#inputCheck');
+            check.addEventListener('blur', func7);
+
+            function func7()
+            {
+                dataLength = this.dataset.length;
+                checkLangth = this.value.length;
+
+                if (dataLength == checkLangth)
+                {
+                    this.style.borderColor = 'green';
+	            } 
+                else 
+                {
+		            this.style.borderColor = 'red';
+	            }
+            }
+
+        // Задача 9.
+
+            var block = document.getElementsByTagName('div');
+            for(i = 0; i < block.length; i++)
+            {
+                block[i].addEventListener('click', func8)
+            }
+
+            function func8()
+            {
+                this.style.background = 'green';
+                this.removeEventListener('click', func8)
+                this.addEventListener('click', func9)
+            }
+
+            function func9()
+            {
+                this.style.background = 'red';
+                this.removeEventListener('click', func9)
+                this.addEventListener('click', func8)
+            }
+    
+    </script>
+</body>
+</html>
