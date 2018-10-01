@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>21 урок</title>
+</head>
+<body>
+
+    <script>
+    
+        //Задача 1
+
+            var date = new Date();
+            document.write("Задача 1. <br>" + date.getDate() + "<br><br>");
+
+        //Задача 2
+
+            document.write("Задача 2. <br>" + date.getMonth() + "<br><br>");
+    
+        //Задача 3
+
+            document.write("Задача 3. <br>" + date.getFullYear() + "<br><br>");
+
+        //Задача 4
+
+            function getZero(num)
+            {
+	            if (num > 0 && num < 10) 
+                { 
+		         return '0' + num;
+	            } 
+                else 
+                {
+		            return num;
+                }
+            }
+
+            document.write("Задача 4.<br>" + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + ' ' + getZero(date.getDate()) + '.' + getZero(date.getMonth() + 1) + '.' + date.getFullYear() + "<br><br>");
+
+        //Задача 5
+
+            document.write("Задача 5.<br>" + date.getDate() + "<br><br>");
+
+        //Задача 6
+
+            function showDay(num)
+            {
+                switch(num) 
+                {
+                    case 0:
+                        return "вс";
+                        break;
+                    case 1:
+                        return "пн";
+                        break;
+                    case 2:
+                        return "вт";
+                        break;
+                    case 3:
+                        return "ср";
+                        break;
+                    case 4:
+                        return "чт";
+                        break;
+                    case 5:
+                        return "пт";
+                        break;
+                    case 6:
+                        return "сб";
+                        break;
+                    default:
+                        return alert("Ошибка. Не ввели число.");
+                        break;
+                }
+            }
+            document.write("Задача 6.<br>" + showDay(date.getDate()) + "<br><br>");
+
+        //Задача 7
+            
+            var date1 = new Date(2015, 0, 7);
+            document.write("Задача 7.<br>" + showDay(date1.getDay()) + "<br><br>");
+
+        //Задача 8
+
+            var date2 = new Date();
+            document.write("Задача 8.<br>" + Math.floor(date2.getTime() / (1000 * 60)) + "<br><br>");
+
+        //Задача 9
+
+            var time = Date.parse('1988-03-01T00:00:00');
+            var now = date.getTime();
+            var result = now - time;
+            document.write("Задача 9.<br>" + (result / (1000*60*60)) + "<br><br>");
+
+        //Задача 10
+
+            var date3 = new Date();
+            var now1 = new Date(date3.getFullYear(), date3.getMonth(), date3.getDate(), 0, 0, 0);
+            result1 = Math.floor((date3.getTime() - now1.getTime()) / 1000)
+            document.write("Задача 10.<br>" + result1 + "<br><br>");
+
+        //Задача 11
+
+            var date4 = new Date();
+            var now2 = new Date(date4.getFullYear(), date4.getMonth(), date4.getDate(), 23, 59, 59);
+            result2 = Math.floor((now2.getTime() - date4.getTime()) / 1000)
+            document.write("Задача 11.<br>" + result2 + "<br><br>");
+
+        //Задача 12
+
+            document.write("Задача 12.<br>" + + "<br><br>");
+
+    </script>
+</body>
+</html>

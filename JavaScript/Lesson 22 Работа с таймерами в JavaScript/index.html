@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Урок 22</title>
+</head>
+<body onload="goTwo(), go()">
+    
+    <p>Задача 1.</p>
+
+        <span id="span1">0</span><br>
+        <button onclick="timer()">Нажми на меня!</button>
+
+    <p>Задача 2.</p>
+
+        <span id="span2">0</span><br>
+        <button onclick="timer1()" id='button1'>Запустить таймер</button>
+        <button onclick="timer2()" id='button2' disabled>Остановить таймер</button>
+
+    <p>Задача 3.</p>
+    
+        <span id="clock">00:00:00</span>
+
+    <p>Задача 4.</p>
+
+        <span id='span3'>10</span><br>
+        <button onclick="start()" id='button3'>Запусти обратный отсчет.</button>
+
+    <p>Задача 5.</p>
+    
+        <img src="img/1.png" alt="1.png" id='goImg'>
+
+    <p>Задача 6.</p>
+
+        <img src="img/1.png" alt="1.png" id='goImg1'>
+        <img src="img/2.png" alt="1.png" id='goImg2'>
+        <img src="img/3.png" alt="1.png" id='goImg3'>
+        <br>
+        <button onclick="goThree()" id='button4'>Запустить карусель!</button>
+
+    <p>Задача 7.</p>
+
+        <img src="img/1.png" alt="1.png" id='goImg7'>
+        <img src="img/2.png" alt="1.png" id='goImg8'>
+        <img src="img/3.png" alt="1.png" id='goImg9'>
+        <img src="img/4.png" alt="1.png" id='goImg10'>
+        <img src="img/5.png" alt="1.png" id='goImg11'>
+        <img src="img/6.png" alt="1.png" id='goImg12'>
+        <br>
+        <button onclick="goFourStart()" id='button5'>Запустить карусель!</button>
+        <button onclick="goFourStop()" id='button6' disabled>Остановить карусель!</button>
+
+    <p>Задача 8.</p>
+
+    <script>
+    
+        // Задача 1
+
+            function func1()
+            {
+                var elem = document.querySelector('#span1');
+                elem.innerHTML = Number(elem.innerHTML) + 1;
+            }
+
+            function timer1()
+            {
+                window.setInterval(func1, 1000);
+            }
+
+        // Задача 2
+
+            let id;
+
+            function func2()
+            {
+                var elem = document.querySelector('#span2');
+                elem.innerHTML = Number(elem.innerHTML) + 1;
+            }
+
+            function timer1()
+            {
+                id = window.setInterval(func2, 1000);
+
+                var elem1 = document.querySelector('#button1');
+                var elem2 = document.querySelector('#button2');
+
+                elem1.disabled = true;
+                elem2.disabled = false;
+            }
+
+            function timer2()
+            {
+                window.clearInterval(id);
+
+                var elem1 = document.querySelector('#button1');
+                var elem2 = document.querySelector('#button2');
+
+                elem1.disabled = false;
+                elem2.disabled = true;
+            }
+
+        // Задача 3
+
+            function go()
+            {
+			    window.timerId = window.setInterval(timer3, 500);
+		    }
+
+		    function timer3()
+            {
+			    var clock = document.getElementById('clock');
+			    var date = new Date();
+			    clock.innerHTML = addZero(date.getHours()) + ':' + addZero(date.getMinutes()) + ':' + addZero(date.getSeconds());
+		    }
+
+		    function addZero(num)
+            {
+			    if(num <= 9) return '0'+num;
+				    else return num;
+		    }
+
+        // Задача 4
+
+            function start()
+            {
+                var elem = document.getElementById('span3');
+                var elem1 = document.querySelector('#button3');
+                var sum = elem.innerHTML;
+                elem1.disabled = true;
+
+               if (Number(sum) == 0)
+                {
+                    elem.innerHTML = sum + "<br> Обратный отсчет завершен.";
+                }
+                else
+                {
+                    elem.innerHTML = Number(sum) - 1;
+                    window.setTimeout(start, 1000);                    
+                }
+
+                
+            }
+
+
+        // Задача 5
+            
+        var j = 1;
+            function goTwoTimer()
+            {
+                var arrImg = ['img/1.png','img/2.png','img/3.png'];
+
+                var elem = document.querySelector('#goImg');
+                elem.setAttribute('src', arrImg[j]);
+                j++;
+                if(j == arrImg.length)
+                {
+                    j = 0;
+                }
+            }
+
+            function goTwo()
+            {
+                window.setInterval(goTwoTimer, 1000);
+            }
+
+        // Задача 6
+
+            var k = 1;
+            var g = 2;
+            var y = 0;
+
+            function goThreeTimer()
+            {
+                var arrImg = ['img/1.png','img/2.png','img/3.png'];
+
+                var elem1 = document.querySelector('#goImg1');
+                var elem2 = document.querySelector('#goImg2');
+                var elem3 = document.querySelector('#goImg3');
+                
+
+                elem1.src = arrImg[k];
+                elem2.src = arrImg[g];
+                elem3.src = arrImg[y];
+                
+                k++;
+                g++;
+                y++;
+
+                if(k == arrImg.length)
+                {
+                    k = 0;
+                }
+
+                if(g == arrImg.length)
+                {
+                    g = 0;
+                }
+
+                if(y == arrImg.length)
+                {
+                    y = 0;
+                }
+            }
+
+            function goThree() 
+            {
+                window.setInterval(goThreeTimer, 1000);
+
+                var button = document.querySelector('#button4');                
+                button.disabled = true;
+            }
+
+        // Задача 7
+
+            var img7 = 1;
+            var img8 = 2;
+            var img9 = 3;
+            var img10 = 4;
+            var img11 = 5;
+            var img12 = 0;
+
+            function goFourTimer()
+            {
+                var arrImg = ['img/1.png','img/2.png','img/3.png', 'img/4.png','img/5.png','img/6.png'];
+
+                var elem1 = document.querySelector('#goImg7');
+                var elem2 = document.querySelector('#goImg8');
+                var elem3 = document.querySelector('#goImg9');
+                var elem4 = document.querySelector('#goImg10');
+                var elem5 = document.querySelector('#goImg11');
+                var elem6 = document.querySelector('#goImg12');
+                
+
+                elem1.src = arrImg[img7];
+                elem2.src = arrImg[img8];
+                elem3.src = arrImg[img9];
+                elem4.src = arrImg[img10];
+                elem5.src = arrImg[img11];
+                elem6.src = arrImg[img12];
+                
+                img7++; 
+                img8++; 
+                img9++; 
+                img10++;
+                img11++;
+                img12++;
+
+                if(img7 == arrImg.length)
+                {
+                    img7 = 0;
+                }
+
+                if(img8 == arrImg.length)
+                {
+                    img8 = 0;
+                }
+
+                if(img9 == arrImg.length)
+                {
+                    img9 = 0;
+                }
+
+                if(img10 == arrImg.length)
+                {
+                    img10 = 0;
+                }
+
+                if(img11 == arrImg.length)
+                {
+                    img11 = 0;
+                }
+
+                if(img12 == arrImg.length)
+                {
+                    img12 = 0;
+                }
+            }
+
+            function goFourStart() 
+            {
+                window.idFour = window.setInterval(goFourTimer, 1000);
+
+                var button5 = document.querySelector('#button5');                
+                var button6 = document.querySelector('#button6');
+
+                button5.disabled = true;
+                button6.disabled = false;
+            }
+
+            function goFourStop()
+            {
+                window.clearInterval(window.idFour);
+
+                var button5 = document.querySelector('#button5');                
+                var button6 = document.querySelector('#button6');
+
+                button5.disabled = false;
+                button6.disabled = true;
+            }
+
+        // Задача 8
+    
+    </script>
+</body>
+</html>
