@@ -117,36 +117,40 @@
     <b><p>Task 6:<br>В имеющемся шаблоне сайта заменить статичное меню (ul - li) на генерируемое через PHP. Необходимо представить пункты меню как элементы массива и вывести их циклом. Подумать, как можно реализовать меню с вложенными подменю? Попробовать его реализовать.</p></b>
         <?php
 
-        $arrUl = [
-            'Главная',
-            'Одежда' => ['Мужская одежда', 'Женская одежда'],
-            'Контакты'
-        ];
-
-        function generateMenu($arr)
-        {
-            foreach($arr as $key => $value)
-            {
-                if(is_array($value))
-                {
-                    echo '<ul>' . $key;
-
-                    foreach($value as $index)
-                    {
-                       echo  '<li>'. $index . '</li>';
-                    }
-
-                    echo '</ul>';
-                }
-
-                if(!is_array($value))
-                {
-                    echo '<ul>' . $value . '</ul>';
-                }                
-            }
-        }
-
-        echo generateMenu($arrUl);
+        $arrUl = [ 
+            'Главная', 
+            'Одежда' => 
+            [ 
+                'Мужская одежда'=>[
+                    'Джемперы', 'Брюки' 
+                ], 
+                'Женская одежда'=>[
+                    'Джакеты','Юбки'
+                ], 
+            ], 
+            'Контакты' 
+            ]; 
+            
+            function generateMenu($arr) 
+            { 
+                foreach($arr as $key => $value) 
+                { 
+                    if(is_array($value)) 
+                    { 
+                        echo "<ul>" . $key; 
+                        echo generateMenu($value); 
+                        echo "</ul>"; 
+                    } 
+                    else 
+                    { 
+                        echo "<li>" . $value . "</li>"; 
+                    } 
+                } 
+            }; 
+            
+            var_dump($arrUl); 
+            
+            echo generateMenu($arrUl);
 
         ?>
     <b><p>Task 7:<br>*Вывести с помощью цикла for числа от 0 до 9, НЕ используя тело цикла. Выглядеть это должно так: <br>
