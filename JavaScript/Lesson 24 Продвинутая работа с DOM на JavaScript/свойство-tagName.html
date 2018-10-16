@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Свойство TagName</title>
+</head>
+<body>
+    
+    <p id="elem8">Задача 8</p>
+    <p id="elem9">Задача 9</p>
+    <p id="elem10">Задача 10</p>
+        <h1 class="www">Элемент 1</h1>
+        <p class="www">Элемент 2</p>
+        <div class="www">Элемент 3</div>
+
+    <script>
+            
+        //Задача 8
+        var elem8 = document.querySelector('#elem9');
+        document.write('<br><br>Задача 8 ' + elem8.tagName + ' - ');
+
+        //Задача 9
+        var elem9 = document.querySelector('#elem9');
+        document.write('<br><br>Задача 9 ' + elem9.tagName.toLocaleLowerCase() + ' - ');
+
+        //Задача 10
+        var elem10 = document.querySelector('#elem10');
+        var elems = document.querySelectorAll('.www');
+            for (var i = 0; i < elems.length; i++) 
+            {
+	            elems[i].innerHTML = elems[i].innerHTML + elems[i].tagName.toLowerCase();
+            }
+        
+    
+    </script>
+</body>
+</html>

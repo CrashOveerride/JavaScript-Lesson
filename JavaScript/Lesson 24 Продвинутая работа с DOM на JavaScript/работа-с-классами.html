@@ -8,11 +8,59 @@
 </head>
 <body>
     
-
+    <p id="elem1">Задача 1</p>
+    <p id="elem2" class="www">Задача 2</p>
+    <p id="elem3">Задача 3</p>
+    <p id="elem4">Задача 4</p>
+    <button id='button4'>Нажми на меня!</button>
+    <p id="elem5" class="aaa bbb ccc">Задача 5</p>
+    <p id="elem6" class="aaa bbb ccc">Задача 6</p>
 
     <script>
     
-    
+        //Задача 1
+        
+        var elem1 = document.querySelector('#elem1');
+        elem1.classList.add('www');
+        document.write('<br><br>Задача 1' + elem1.className + ' - ');
+        
+        //Задача 1
+        
+        var elem2 = document.querySelector('#elem2');
+        elem2.classList.remove('www');
+        document.write('Задача 2' + elem2.className + ' - ');
+        
+        //Задача 1
+        
+        var elem3 = document.querySelector('#elem3');
+        elem3.classList.contains('www');
+        document.write('Задача 3 ' + elem3.classList.contains('www') + ' - ');
+        
+        //Задача 1
+        
+        var button4 = document.querySelector('#button4');
+        button4.addEventListener('click', func4);
+
+        function func4()
+        {
+            var elem4 = document.querySelector('#elem4');
+            elem4.classList.toggle('www');
+            console.log(elem4.className);
+        }
+        
+        //Задача 1
+        
+        var elem5 = document.querySelector('#elem5');
+        document.write('Задача 5 ' + elem5.classList.length + ' - ')
+        
+        //Задача 1
+        
+        var elem6 = document.querySelector('#elem6');
+        for(i = 0; i < elem6.classList.length; i++) 
+        {
+            document.write('Задача 6 ' + elem6.classList[i] + ' : ');
+        }
+
 
     </script>
 </body>
