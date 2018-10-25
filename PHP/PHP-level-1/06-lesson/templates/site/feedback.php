@@ -9,8 +9,39 @@
 
 <form method="post">
   <div class="form-group">
+<?php
+  $sql = "INSERT INTO `feedback` (`user`, `text`) VALUES ('".$_POST['name']."', '".$_POST['feed']."')";
+   
+
+   if( isset($_POST['name']) || isset($_POST['feed']) )
+   {
+
+   // Проверяем на ошибки
+   $errors = array();
+
+   if( $_POST['name'] == '' )
+   {
+      $errors = 'Введите имя!';
+   }
+
+   if( $_POST['feed'] == '' )
+   {
+      $errors = 'Введите комментарий!';
+   }
+
+   if ( empty($errors) )
+   {
+      execute($sql);
+   }
+   else
+   {
+      echo $errors ['0'];
+   }   
+   }
+
+?>
    <input type="text"
-          name="user_name" 
+          name="name" 
           class="form-control" 
           id="formGroupExampleInput" 
           placeholder="Введите имя">
@@ -24,6 +55,6 @@
   </div>
 
   <div class="form-group">
-      <button type="submit">Отправить комментарий</button>
+      <input type ="submit" value="Оставить комментарий" class="form_group">
   </div>
 </form>
