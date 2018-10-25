@@ -38,7 +38,7 @@ echo render('site/feedback', [
 
       if ( empty($errors) )
       {
-         mysqli_query($connection, "INSERT INTO `feedback` (`user`, `text`) VALUES ('{$user_name}', {$feed}')");
+         execute("INSERT INTO `feedback` (`user`, `text`) VALUES ('{$user_name}', {$feed}')");
       }
       else
       {
