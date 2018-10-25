@@ -32,6 +32,7 @@
    if ( empty($errors) )
    {
       execute($sql);
+      header('Location: /feedback.php');
    }
    else
    {
