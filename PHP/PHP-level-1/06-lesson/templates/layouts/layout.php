@@ -20,15 +20,6 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/users.php">Users</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/users.php?add">New user</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/upload.php">Upload Files</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/calculate.php">Calculate</a>
             </li>
             <li class="nav-item">

@@ -17,65 +17,65 @@
     
     <?php
 
-        if(isset($_POST['del'])) {
-            if ($_POST['f2'] != 0) {
-                if(is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
-                    $first = $_POST['f1'];
-                    $two = $_POST['f2'];
-                    $result = $first / $two;
-                    echo $result;
-                }else{
-                    unset($_POST['del']);
-                    unset($_POST['f1']);
-                    unset($_POST['21']);
-                    echo 'Введено не правильное число.';
-                };
-            }else{
-                echo 'На ноль делить нельзя.';
-            };
-        };
-
-        if(isset($_POST['minus'])) {
-            if(is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
+    if (isset($_POST['del'])) {
+        if ($_POST['f2'] != 0) {
+            if (is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
                 $first = $_POST['f1'];
                 $two = $_POST['f2'];
-                $result = $first - $two;
+                $result = $first / $two;
                 echo $result;
-            }else{
-                unset($_POST['minus']);
+            } else {
+                unset($_POST['del']);
                 unset($_POST['f1']);
                 unset($_POST['21']);
                 echo 'Введено не правильное число.';
             };
+        } else {
+            echo 'На ноль делить нельзя.';
         };
+    };
 
-        if(isset($_POST['umn'])) {
-            if(is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
-                $first = $_POST['f1'];
-                $two = $_POST['f2'];
-                $result = $first * $two;
-                echo $result;
-            }else{
-                unset($_POST['umn']);
-                unset($_POST['f1']);
-                unset($_POST['21']);
-                echo 'Введено не правильное число.';
-            };
+    if (isset($_POST['minus'])) {
+        if (is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
+            $first = $_POST['f1'];
+            $two = $_POST['f2'];
+            $result = $first - $two;
+            echo $result;
+        } else {
+            unset($_POST['minus']);
+            unset($_POST['f1']);
+            unset($_POST['21']);
+            echo 'Введено не правильное число.';
         };
+    };
 
-        if(isset($_POST['summa'])) {
-            if(is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
-                $first = $_POST['f1'];
-                $two = $_POST['f2'];
-                $result = $first + $two;
-                echo $result;
-            }else{
-                unset($_POST['summa']);
-                unset($_POST['f1']);
-                unset($_POST['21']);
-                echo '>Введено не правильное число.';
-            };
+    if (isset($_POST['umn'])) {
+        if (is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
+            $first = $_POST['f1'];
+            $two = $_POST['f2'];
+            $result = $first * $two;
+            echo $result;
+        } else {
+            unset($_POST['umn']);
+            unset($_POST['f1']);
+            unset($_POST['21']);
+            echo 'Введено не правильное число.';
         };
+    };
+
+    if (isset($_POST['summa'])) {
+        if (is_numeric($_POST['f1']) && is_numeric($_POST['f2']) || is_double($_POST['f1']) && is_double($_POST['f2'])) {
+            $first = $_POST['f1'];
+            $two = $_POST['f2'];
+            $result = $first + $two;
+            echo $result;
+        } else {
+            unset($_POST['summa']);
+            unset($_POST['f1']);
+            unset($_POST['21']);
+            echo '>Введено не правильное число.';
+        };
+    };
     ?>
 
 <!----------------------------------------------------------------------------- 
@@ -101,32 +101,26 @@
 
 <?php
 
-if(isset($_POST['submit']))
-{
-   $a = (int) $_POST['a'];
-   $b = (int) $_POST['b'];
-   $p = $_POST['operation'];
-   $c;
+if (isset($_POST['submit'])) {
+    $a = (int)$_POST['a'];
+    $b = (int)$_POST['b'];
+    $p = $_POST['operation'];
+    $c;
 
-   if ($p == '+') $c = $a + $b;
-   if ($p == '-') $c = $a - $b;
-   if ($p == '*') $c = $a * $b;
-   if ($p == '/') 
-   {
-      if($b == 0)
-      {
-         echo 'На ноль делить нельзя';
-      }
-      else
-      {
-         $c = $a / $b;
-      }      
-   }
+    if ($p == '+') $c = $a + $b;
+    if ($p == '-') $c = $a - $b;
+    if ($p == '*') $c = $a * $b;
+    if ($p == '/') {
+        if ($b == 0) {
+            echo 'На ноль делить нельзя';
+        } else {
+            $c = $a / $b;
+        }
+    }
 
-   if($c)
-   {
-      echo $c;
-   }
+    if ($c) {
+        echo $c;
+    }
 }
 
 ?>

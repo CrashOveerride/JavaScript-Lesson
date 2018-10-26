@@ -17,7 +17,7 @@ function render(string $template, array $data = [], bool $withLayout = true, str
 
    //ПУТЬ К ШАБЛОНАМ
    $templates = [
-      'layout' => "{$config['app']['templatesPath']}/{$layout}.php",
+      'layout' => "{$config['app']['templatesPath']}/layouts/{$layout}.php",
       'page' => "{$config['app']['templatesPath']}/{$template}.php"
    ];
 
