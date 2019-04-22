@@ -26,3 +26,13 @@
   "editor.smoothScrolling": true,
   "window.smoothScrollingWorkaround": true
 }
+
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "onFocusChange",
+    "workbench.colorTheme": "Material Theme",
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "left",
+    "explorer.confirmDelete": false
+}
